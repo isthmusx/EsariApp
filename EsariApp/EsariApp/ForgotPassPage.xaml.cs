@@ -16,5 +16,9 @@ namespace EsariApp
         {
             InitializeComponent();
         }
+        private void BTNLogin(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LoginUI());
+        }
     }
 }

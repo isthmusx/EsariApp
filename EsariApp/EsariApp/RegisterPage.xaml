@@ -1,12 +1,117 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EsariApp.RegisterPage">
+             x:Class="EsariApp.RegisterPage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#0c0e0c">
+    
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Register!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image Grid.Row="0" Margin="0,10" Source="" Aspect="AspectFit" HeightRequest="50" WidthRequest="15"></Image>
+            <Frame Grid.Row="1" Margin="0,0,0,-60" BorderColor="#0c0e0c" HasShadow="True"  CornerRadius="50" HeightRequest="1000" BackgroundColor="#eaebea">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0" BackgroundColor="#eaebea">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0"  
+                           Text="Register new account!" 
+                           FontSize="24" 
+                           FontAttributes="Bold" 
+                           TextColor="#0c0e0c" 
+                           HorizontalOptions="CenterAndExpand">
+                    </Label>
+                    <Label Grid.Row="1" 
+                           Margin="0,-15,0,0" 
+                           Text="Please fill up all fields" 
+                           TextColor="#0c0e0c"  
+                           HorizontalOptions="CenterAndExpand">
+                    </Label>
+                    <Entry x:Name="txtFN" 
+                           Grid.Row="2" 
+                           Placeholder="Email" 
+                           Margin="20,20,20,0"  
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="FillAndExpand" 
+                           TextColor="#0c0e0c">
+                    </Entry>
+                    <Entry x:Name="txtLN" 
+                           Grid.Row="3" 
+                           Placeholder="Phone number" 
+                           Margin="20,0,20,0" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="FillAndExpand" 
+                           TextColor= "#0c0e0c">
+                    </Entry>
+                    <Entry x:Name="txtSN" 
+                           Grid.Row="4" 
+                           Placeholder="Store name" 
+                           Margin="20,0,20,0" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="FillAndExpand" 
+                           TextColor="#0c0e0c">
+                    </Entry>
+                    <Entry x:Name="txtUN" 
+                           Grid.Row="5" 
+                           Placeholder="Username" 
+                           Margin="20,0,20,0" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="FillAndExpand" 
+                           TextColor="#0c0e0c">
+                    </Entry>
+                    <Entry x:Name="txtPW" 
+                           Grid.Row="6" 
+                           Placeholder="Password" 
+                           Margin="20,0,20,0"
+                           IsPassword="True" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="FillAndExpand" 
+                           TextColor="#0c0e0c">
+                    </Entry>
+                    <Entry x:Name="txtCPW" 
+                           Grid.Row="7" 
+                           Placeholder="Confirm password" 
+                           Margin="20,0,20,20"
+                           IsPassword="True" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="FillAndExpand" 
+                           TextColor="#0c0e0c">
+                    </Entry>
+                    <Button Grid.Row="8" 
+                            Text="CREATE ACCOUNT" 
+                            BackgroundColor="#d8323c" 
+                            CornerRadius="20" 
+                            Margin="20,0,20,0"
+                            >
+                    </Button>
+
+                    <Label Grid.Row="9" 
+                           Margin="20,0,20,0" 
+                           Text="Already have an account? " 
+                           HorizontalOptions="CenterAndExpand">
+                    </Label>
+                    <Label Grid.Row="9" 
+                           Margin="20,20,20,0" 
+                           Text="Login here"
+                           TextColor="#d8323c"
+                           HorizontalOptions="CenterAndExpand" 
+                           TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="BTNLogin"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </Frame>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

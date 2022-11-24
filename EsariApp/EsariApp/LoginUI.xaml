@@ -56,7 +56,7 @@
                            TextColor="#0c0e0c">
                     </Entry>
                     <Button Grid.Row="4" 
-                            Text="Login" 
+                            Text="LOGIN" 
                             BackgroundColor="#d8323c" 
                             CornerRadius="20" 
                             Clicked="BTNLogin">
@@ -72,12 +72,13 @@
                     </Label>
                     <Label Grid.Row="7" 
                            Margin="-95,-10,0,0" 
-                           Text="Don't have an account? " 
+                           Text="Don't have an account?" 
                            HorizontalOptions="CenterAndExpand">
                     </Label>
                     <Label Grid.Row="7" 
                            Margin="140,-10,0,0" 
                            Text="Sign up here" 
+                           TextColor="#d8323c"
                            HorizontalOptions="CenterAndExpand" 
                            TextDecorations="Underline">
                            <Label.GestureRecognizers>
