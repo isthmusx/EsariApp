@@ -36,7 +36,7 @@
                            TextColor="#0c0e0c"  
                            HorizontalOptions="CenterAndExpand">
                     </Label>
-                    <Entry x:Name="txtFN" 
+                    <Entry x:Name="txtEmail" 
                            Grid.Row="2" 
                            Placeholder="Email" 
                            Margin="20,20,20,0"  
@@ -44,7 +44,7 @@
                            VerticalOptions="FillAndExpand" 
                            TextColor="#0c0e0c">
                     </Entry>
-                    <Entry x:Name="txtLN" 
+                    <Entry x:Name="txtPhone" 
                            Grid.Row="3" 
                            Placeholder="Phone number" 
                            Margin="20,0,20,0" 
@@ -91,7 +91,7 @@
                             BackgroundColor="#d8323c" 
                             CornerRadius="20" 
                             Margin="20,0,20,0"
-                            >
+                            Clicked="Button_Clicked">
                     </Button>
 
                     <Label Grid.Row="9" 

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using EsariApp.Tables;
+using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -22,13 +24,30 @@ namespace EsariApp
 
         private void BTNLogin(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "admin" && txtPassword.Text == "admin123")
+
+            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "UserDatabase.db");
+            var db = new SQLiteConnection(dbpath);
+            var myquery = db.Table<RegisterUserTable>().Where(u=>u.UserName.Equals(txtUsername.Text) && u.Password.Equals(txtPassword.Text));
+
+           if (myquery != null)
             {
-                Navigation.PushAsync(new Homepage());
+                App.Current.MainPage = new NavigationPage(new Homepage());
             }
             else
             {
-                DisplayAlert("Oops..", "Your credentials are incorrect!", "Ok");
+                Device.BeginInvokeOnMainThread(async () =>
+                    {
+                        var result = await this.DisplayAlert("Error!", "Invalid account", "Ok", "Cancel");
+
+                        if (result)
+                        {
+                            await Navigation.PushAsync(new LoginUI());
+                        }
+                        else
+                        {
+                            await Navigation.PushAsync(new LoginUI());
+                        }
+                    });
             }
         }
 
