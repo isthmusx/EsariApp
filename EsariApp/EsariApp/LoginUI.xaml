@@ -4,90 +4,102 @@
              x:Class="EsariApp.LoginUI"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#0c0e0c">
+             BackgroundColor="#f6f0f0">
     
     <ContentPage.Content>
-        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  >
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="50,0,50,0"  >
             <Grid.RowDefinitions >
                 <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <Image Grid.Row="0" Margin="0,50" Source="logo.png" Aspect="AspectFit" HeightRequest="150" WidthRequest="50"></Image>
-            <Frame Grid.Row="1" Margin="0,0,0,-40" BorderColor="#0c0e0c" HasShadow="True"  CornerRadius="50" HeightRequest="700" BackgroundColor="#eaebea">
-                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0" BackgroundColor="#eaebea">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Label Grid.Row="0"  
-                           Text="Welcome!" 
-                           FontSize="24" 
-                           FontAttributes="Bold" 
-                           TextColor="#0c0e0c" 
-                           HorizontalOptions="CenterAndExpand">
-                    </Label>
-                    <Label Grid.Row="1" 
-                           Margin="0,-15,0,0" 
-                           Text="Login in to account" 
-                           TextColor="#0c0e0c"  
-                           HorizontalOptions="CenterAndExpand">
-                    </Label>
-                    <Entry x:Name="txtUsername" 
-                           Grid.Row="2" 
-                           Placeholder="Username" 
-                           Margin="0,20,0,0" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="FillAndExpand" 
-                           TextColor="#0c0e0c">
-                    </Entry>
-                    <Entry x:Name="txtPassword" 
-                           Grid.Row="3" 
-                           Placeholder="Password" 
-                           IsPassword="True" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="FillAndExpand" 
-                           TextColor="#0c0e0c">
-                    </Entry>
-                    <Button Grid.Row="4" 
-                            Text="LOGIN" 
-                            BackgroundColor="#d8323c" 
-                            CornerRadius="20" 
-                            Clicked="BTNLogin">
-                    </Button>
-                    <Label Grid.Row="6" 
-                           Text="Forgot Password?" 
-                           FontAttributes="Bold" 
-                           HorizontalOptions="CenterAndExpand" 
-                           TextDecorations="Underline">
-                           <Label.GestureRecognizers>
-                               <TapGestureRecognizer Tapped="BTNForgotPass"/>
-                           </Label.GestureRecognizers>
-                    </Label>
-                    <Label Grid.Row="7" 
-                           Margin="20,0,20,0" 
-                           Text="Don't have an account?" 
-                           HorizontalOptions="CenterAndExpand">
-                    </Label>
-                    <Label Grid.Row="7" 
-                           Margin="20,20,20,0" 
-                           Text="Sign up here" 
-                           TextColor="#d8323c"
-                           HorizontalOptions="CenterAndExpand" 
-                           TextDecorations="Underline">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="BTNRegister"/>
-                        </Label.GestureRecognizers>
-                    </Label>
+            <Image Grid.Row="0" Margin="0,30" Source="loginpic.png" Aspect="AspectFit" HeightRequest="200" WidthRequest="100"></Image>
+            <Image Grid.Row="1" Margin="0,0,0,40" Source="logo.png" Aspect="AspectFit" HeightRequest="100" WidthRequest="50"></Image>
+            <Entry x:Name="txtUsername" 
+                    Grid.Row="2" 
+                    Placeholder="Username"
+                    Margin="0,0,0,30"
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="FillAndExpand" 
+                    PlaceholderColor="#7B7B7B"
+                    FontFamily="Bebas-Neue" 
+                    CharacterSpacing="1.5"
+                    TextColor="#0c0e0c">
+            </Entry>
+            <Entry x:Name="txtPassword" 
+                    Grid.Row="3" 
+                    Placeholder="Password" 
+                    IsPassword="True" 
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="FillAndExpand" 
+                    PlaceholderColor="#7B7B7B"
+                    FontFamily="Bebas-Neue"
+                    CharacterSpacing="1.5"
+                    TextColor="#0c0e0c">
+            </Entry>
+            <Button Grid.Row="6" 
+                    Text="LOGIN" 
+                    TextColor="White"
+                    BackgroundColor="#00D8C1" 
+                    CornerRadius="10" 
+                    Margin="5,10,0,0"
+                    HeightRequest="40"
+                    FontFamily="Bebas-Neue"
+                    FontSize= "Medium"
+                    CharacterSpacing="2"
+                    Clicked="BTNLogin">
+                        
+            </Button>
+            <CheckBox Grid.Row="4"
+                      Margin="0,2,0,0"
+                      />
+            <Label Grid.Row="4" 
+                    Text="Remember me" 
+                    FontFamily="Athiti-SemiBold"
+                    Margin="30,5,0,0"
+                    CharacterSpacing="1"
+                    TextColor="Black">
 
-                </Grid>
-            </Frame>
+            </Label>
+            <Label Grid.Row="4" 
+                    Text="Forgot Password?" 
+                    FontFamily="Athiti-SemiBold"
+                    Margin="165,5,0,0"
+                    CharacterSpacing="0.5"
+                    TextColor="#00D8C1">
+                        
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BTNForgotPass"/>
+                    </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Row="7" 
+                    
+                    Text="Don't have an account?"
+                    Margin="10,15,0,0"
+                    TextColor="Black"
+                    CharacterSpacing="0.5"
+                    FontFamily="Athiti-SemiBold">
+            </Label>
+            <Label Grid.Row="7" 
+                    Margin="205,15,0,0" 
+                    Text="Sign up here"
+                    CharacterSpacing="0.5"
+                    FontFamily="Athiti-SemiBold"
+                    TextColor="#00D8C1">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BTNRegister"/>
+                </Label.GestureRecognizers>
+            </Label>
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>

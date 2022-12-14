@@ -7,11 +7,41 @@
              BackgroundColor="#0c0e0c">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to E-Sari!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
+            <Label  HorizontalTextAlignment="End" Margin="0,25,10,25">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Grid.Row="0" Text="Welcome" FontAttributes="Bold" FontSize="Large" TextColor="#d8323c"/>
+                        <Span Grid.Row="0" Text=" seller" FontAttributes="Bold" FontSize="Large" TextColor="#d8323c" />
+                        <Span Grid.Row="0" Text="!" FontAttributes="Bold" FontSize="Large" TextColor="#d8323c" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+           
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0" BackgroundColor="#eaebea">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
 
-            <Button Text="LOGOUT" BackgroundColor="#1496BB" Clicked="Button_Clicked"/>
+                <Button Grid.Row="1" Grid.Column="0" BackgroundColor="#d8323c" ImageSource="" Text="Inventory Management" HeightRequest="150" WidthRequest="150" CornerRadius="20"/>
+                <Button Grid.Row="1" Grid.Column="1" BackgroundColor="#d8323c" ImageSource="" Text="Expense Tracker" HeightRequest="150" WidthRequest="150" CornerRadius="20"/>
+                <Button Grid.Row="2" Grid.Column="0" BackgroundColor="#d8323c" ImageSource="" Text="Sales and Accounting Reports" HeightRequest="150" WidthRequest="150" CornerRadius="20"/>
+                <Button Grid.Row="2" Grid.Column="1" BackgroundColor="#d8323c" ImageSource="" Text="Store Links" HeightRequest="150" WidthRequest="150" CornerRadius="20"/>
+                <Button Grid.Row="3" Grid.Column="0" BackgroundColor="#d8323c" ImageSource="" Text="Orders and Deliveries" HeightRequest="150" WidthRequest="150" CornerRadius="20"/>
+                <Button Grid.Row="3" Grid.Column="1" BackgroundColor="#d8323c" ImageSource="" Text="Record Book" HeightRequest="150" WidthRequest="150" CornerRadius="20"/>
+            </Grid>
+
+
+
+            <Button Text="LOGOUT" BackgroundColor="#d8323c" Clicked="Button_Clicked"/>
 
         </StackLayout>
     </ContentPage.Content>

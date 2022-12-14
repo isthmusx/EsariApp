@@ -3,6 +3,11 @@ using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
+[assembly: ExportFont("BebasNeue-Regular.ttf", Alias ="Bebas-Neue")]
+[assembly: ExportFont("Athiti-Regular.ttf", Alias = "Athiti-Regular")]
+[assembly: ExportFont("Athiti-SemiBold.ttf", Alias = "Athiti-SemiBold")]
+
 namespace EsariApp
 {
     public partial class App : Application
