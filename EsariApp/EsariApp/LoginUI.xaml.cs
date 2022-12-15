@@ -25,29 +25,13 @@ namespace EsariApp
         private void BTNLogin(object sender, EventArgs e)
         {
 
-            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "UserDatabase.db");
-            var db = new SQLiteConnection(dbpath);
-            var myquery = db.Table<RegisterUserTable>().Where(u=>u.UserName.Equals(txtUsername.Text) && u.Password.Equals(txtPassword.Text));
-
-           if (myquery != null)
+            if (txtUsername.Text == "admin" && txtPassword.Text == "12345")
             {
-                App.Current.MainPage = new NavigationPage(new Homepage());
+                Navigation.PushAsync(new Homepage());
             }
             else
             {
-                Device.BeginInvokeOnMainThread(async () =>
-                    {
-                        var result = await this.DisplayAlert("Error!", "Invalid account", "Ok", "Cancel");
-
-                        if (result)
-                        {
-                            await Navigation.PushAsync(new LoginUI());
-                        }
-                        else
-                        {
-                            await Navigation.PushAsync(new LoginUI());
-                        }
-                    });
+                DisplayAlert("Invalid Account!", "Please try again", "OK");
             }
         }
 

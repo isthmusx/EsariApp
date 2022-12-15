@@ -25,33 +25,35 @@
             <Image Grid.Row="0" Margin="0,30" Source="loginpic.png" Aspect="AspectFit" HeightRequest="200" WidthRequest="100"></Image>
             <Image Grid.Row="1" Margin="0,0,0,40" Source="logo.png" Aspect="AspectFit" HeightRequest="100" WidthRequest="50"></Image>
             <Entry x:Name="txtUsername" 
-                    Grid.Row="2" 
-                    Placeholder="Username"
-                    Margin="0,0,0,30"
-                    HorizontalOptions="FillAndExpand" 
-                    VerticalOptions="FillAndExpand" 
-                    PlaceholderColor="#7B7B7B"
-                    FontFamily="Bebas-Neue" 
-                    CharacterSpacing="1.5"
-                    TextColor="#0c0e0c">
+                   Grid.Row="2" 
+                   Placeholder="Username"
+                   Margin="0,0,0,30"
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="FillAndExpand" 
+                   PlaceholderColor="#7B7B7B"
+                   FontFamily="Bebas-Neue" 
+                   CharacterSpacing="1.5"
+                   TextColor="#0c0e0c">
             </Entry>
             <Entry x:Name="txtPassword" 
-                    Grid.Row="3" 
-                    Placeholder="Password" 
-                    IsPassword="True" 
-                    HorizontalOptions="FillAndExpand" 
-                    VerticalOptions="FillAndExpand" 
-                    PlaceholderColor="#7B7B7B"
-                    FontFamily="Bebas-Neue"
-                    CharacterSpacing="1.5"
-                    TextColor="#0c0e0c">
+                   Grid.Row="3" 
+                   Placeholder="Password" 
+                   IsPassword="True" 
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="FillAndExpand" 
+                   PlaceholderColor="#7B7B7B"
+                   FontFamily="Bebas-Neue"
+                   CharacterSpacing="1.5"
+                   Margin="0,0,0,0"
+                   TextColor="#0c0e0c">
             </Entry>
             <Button Grid.Row="6" 
-                    Text="LOGIN" 
+                    Text="LOGIN"
                     TextColor="White"
                     BackgroundColor="#00D8C1" 
                     CornerRadius="10" 
-                    Margin="5,10,0,0"
+                    Margin="4,20,0,0"
+                    Padding="0,0,0,1"
                     HeightRequest="40"
                     FontFamily="Bebas-Neue"
                     FontSize= "Medium"
@@ -63,43 +65,48 @@
                       Margin="0,2,0,0"
                       />
             <Label Grid.Row="4" 
-                    Text="Remember me" 
-                    FontFamily="Athiti-SemiBold"
-                    Margin="30,5,0,0"
-                    CharacterSpacing="1"
-                    TextColor="Black">
+                   Text="Remember me" 
+                   FontFamily="Athiti-SemiBold"
+                   Margin="30,5,0,0"
+                   CharacterSpacing="1"
+                   TextColor="Black">
 
             </Label>
             <Label Grid.Row="4" 
-                    Text="Forgot Password?" 
-                    FontFamily="Athiti-SemiBold"
-                    Margin="165,5,0,0"
-                    CharacterSpacing="0.5"
-                    TextColor="#00D8C1">
-                        
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="BTNForgotPass"/>
-                    </Label.GestureRecognizers>
-            </Label>
-            <Label Grid.Row="7" 
-                    
-                    Text="Don't have an account?"
-                    Margin="10,15,0,0"
-                    TextColor="Black"
-                    CharacterSpacing="0.5"
-                    FontFamily="Athiti-SemiBold">
-            </Label>
-            <Label Grid.Row="7" 
-                    Margin="205,15,0,0" 
-                    Text="Sign up here"
-                    CharacterSpacing="0.5"
-                    FontFamily="Athiti-SemiBold"
-                    TextColor="#00D8C1">
+                   Text="Forgot Password?" 
+                   FontFamily="Athiti-SemiBold"
+                   Margin="165,5,0,0"
+                   CharacterSpacing="0.5"
+                   TextColor="#00D8C1">
+
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="BTNRegister"/>
+                    <TapGestureRecognizer Tapped="BTNForgotPass"/>
                 </Label.GestureRecognizers>
             </Label>
-            
+            <Label Grid.Row="7" 
+                   HorizontalOptions="Center"
+                   Margin="0,15,0,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span 
+                            Text="Don't have an account? " 
+                            TextColor="Black" 
+                            CharacterSpacing="0.5"
+                            FontFamily="Athiti-SemiBold" />
+                        <Span 
+                            Text="Sign up here "
+                            CharacterSpacing="0.5"
+                            FontFamily="Athiti-SemiBold"
+                            TextColor="#00D8C1" >
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="BTNRegister"/>
+                            </Span.GestureRecognizers>
+                        </Span>
+                        
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>
