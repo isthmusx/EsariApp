@@ -4,104 +4,114 @@
              x:Class="EsariApp.ForgotPassPage"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#0c0e0c">
+             BackgroundColor="#f6f0f0">
 
     <ContentPage.Content>
-        <StackLayout>
-            <Image Grid.Row="0" Margin="0,10" Source="" Aspect="AspectFit" HeightRequest="50" WidthRequest="15"></Image>
-            <Frame Grid.Row="1" Margin="0,0,0,-60" BorderColor="#0c0e0c" HasShadow="True"  CornerRadius="50" HeightRequest="1000" BackgroundColor="#eaebea">
-                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0" BackgroundColor="#eaebea">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                    </Grid.RowDefinitions>
 
-                    <Label Grid.Row="0"  
-                           Text="Reset Password!" 
-                           FontSize="24" 
-                           FontAttributes="Bold" 
-                           TextColor="#0c0e0c" 
-                           HorizontalOptions="CenterAndExpand">
-                    </Label>
-                    <Label Grid.Row="1" 
-                           Margin="0,-15,0,0" 
-                           Text="Please fill up all fields" 
-                           TextColor="#0c0e0c"  
-                           HorizontalOptions="CenterAndExpand">
-                    </Label>
-                    <Entry  
-                           Grid.Row="2" 
-                           Placeholder="Email" 
-                           Margin="20,20,20,0"  
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="FillAndExpand" 
-                           TextColor="#0c0e0c">
-                    </Entry>
-                    <Entry 
-                           Grid.Row="3" 
-                           Placeholder="Code" 
-                           Margin="20,0,20,0" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="FillAndExpand" 
-                           TextColor= "#0c0e0c">
-                    </Entry>
-                    <Button Grid.Row="4" 
-                            Text="Send code"
-                            Margin="20,0,20,0" 
-                            BackgroundColor="#d8323c" 
-                            CornerRadius="20" 
-                            >
-                    </Button>
-                    <Entry 
-                           Grid.Row="5" 
-                           Placeholder="New password" 
-                           Margin="20,0,20,0" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="FillAndExpand" 
-                           TextColor= "#0c0e0c">
-                    </Entry>
-                    <Entry 
-                           Grid.Row="6" 
-                           Placeholder="Confirm password" 
-                           Margin="20,0,20,0" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="FillAndExpand" 
-                           TextColor= "#0c0e0c">
-                    </Entry>
-                    <Button Grid.Row="7" 
-                            Text="RESET PASSWORD"
-                            Margin="20,0,20,0" 
-                            BackgroundColor="#d8323c" 
-                            CornerRadius="20" 
-                            >
-                    </Button>
-                    
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="50,0,50,0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
 
-                    <Label Grid.Row="9" 
-                           Margin="20,0,20,0" 
-                           Text="Cancel password reset? " 
-                           HorizontalOptions="CenterAndExpand">
-                    </Label>
-                    <Label Grid.Row="9" 
-                           Margin="20,20,20,0" 
-                           Text="Go back to login"
-                           TextColor="#d8323c"
-                           HorizontalOptions="CenterAndExpand" 
-                           TextDecorations="Underline">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="BTNLogin"/>
-                        </Label.GestureRecognizers>
-                    </Label>
-                </Grid>
-            </Frame>
+            <Image Grid.Row="0" Margin="0,50,0,30" Source="forgotpass.png" Aspect="AspectFit" HeightRequest="180" WidthRequest="100"></Image>
+            <Image Grid.Row="1" Margin="-45,0,0,10" Source="forgotpasstext.png" Aspect="AspectFit" HeightRequest="65" WidthRequest="40"></Image>
+            <Entry Grid.Row="2" 
+                   Placeholder="Email" 
+                   Margin="0,0,0,10"
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="FillAndExpand" 
+                   PlaceholderColor="#7B7B7B"
+                   FontFamily="Bebas-Neue" 
+                   CharacterSpacing="1.5"
+                   TextColor="#0c0e0c">
+            </Entry>
+            <Entry Grid.Row="3" 
+                   Placeholder="Code" 
+                   Margin="0,0,0,10"
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="FillAndExpand" 
+                   PlaceholderColor="#7B7B7B"
+                   FontFamily="Bebas-Neue" 
+                   CharacterSpacing="1.5"
+                   TextColor="#0c0e0c">
+            </Entry>
+            <Button Grid.Row="4" 
+                    Text="SEND CODE"
+                    TextColor="White"
+                    BackgroundColor="#00D8C1" 
+                    CornerRadius="10" 
+                    Margin="3,10,0,0"
+                    Padding="0,0,0,1"
+                    HeightRequest="40"
+                    FontFamily="Bebas-Neue"
+                    FontSize= "Medium"
+                    CharacterSpacing="2" 
+                    >
+            </Button>
+            <Entry Grid.Row="5" 
+                   Placeholder="New password" 
+                   Margin="0,0,0,10"
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="FillAndExpand" 
+                   PlaceholderColor="#7B7B7B"
+                   FontFamily="Bebas-Neue" 
+                   CharacterSpacing="1.5"
+                   TextColor="#0c0e0c">
+            </Entry>
+            <Entry Grid.Row="6" 
+                   Placeholder="Confirm password" 
+                   Margin="0,0,0,10"
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="FillAndExpand" 
+                   PlaceholderColor="#7B7B7B"
+                   FontFamily="Bebas-Neue" 
+                   CharacterSpacing="1.5"
+                   TextColor="#0c0e0c">
+            </Entry>
+            <Button Grid.Row="7" 
+                    Text="RESET PASSWORD"
+                    TextColor="White"
+                    BackgroundColor="#00D8C1" 
+                    CornerRadius="10" 
+                    Margin="3,10,0,0"
+                    Padding="0,0,0,1"
+                    HeightRequest="40"
+                    FontFamily="Bebas-Neue"
+                    FontSize= "Medium"
+                    CharacterSpacing="2">
+            </Button>
+            <Label Grid.Row="8" 
+                   HorizontalOptions="Center"
+                   Margin="0,15,0,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span 
+                            Text="Cancel password reset? " 
+                            TextColor="Black" 
+                            CharacterSpacing="0.5"
+                            FontFamily="Athiti-SemiBold" />
+                        <Span 
+                            Text=" Login here"
+                            CharacterSpacing="0.5"
+                            FontFamily="Athiti-SemiBold"
+                            TextColor="#00D8C1" >
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="BTNLogin"/>
+                            </Span.GestureRecognizers>
+                        </Span>
 
-        </StackLayout>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

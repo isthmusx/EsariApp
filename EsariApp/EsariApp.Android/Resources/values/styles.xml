@@ -14,5 +14,7 @@
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
     <item name="colorAccent">#00D8C1</item>
+	<item name="android:statusBarColor">@color/colorPrimaryDark</item>
+	<item name="android:windowLightStatusBar">true</item>
   </style>
 </resources>

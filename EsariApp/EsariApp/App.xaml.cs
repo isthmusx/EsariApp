@@ -31,8 +31,10 @@ namespace EsariApp
             InitializeComponent();
 
             MainPage = new NavigationPage(new LoginUI());
+            {
+            }
         }
-
+ 
         protected override void OnStart()
         {
         }
