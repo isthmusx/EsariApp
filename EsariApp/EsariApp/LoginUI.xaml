@@ -24,9 +24,9 @@
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Margin="0,30" Source="loginpic.png" Aspect="AspectFit" HeightRequest="200" WidthRequest="100"></Image>
             <Image Grid.Row="1" Margin="0,0,0,40" Source="logo.png" Aspect="AspectFit" HeightRequest="100" WidthRequest="50"></Image>
-            <Entry x:Name="txtUsername" 
+            <Entry x:Name="txtEmailLogin" 
                    Grid.Row="2" 
-                   Placeholder="Username"
+                   Placeholder="Email"
                    Margin="0,0,0,30"
                    HorizontalOptions="FillAndExpand" 
                    VerticalOptions="FillAndExpand" 
@@ -35,7 +35,7 @@
                    CharacterSpacing="1.5"
                    TextColor="#0c0e0c">
             </Entry>
-            <Entry x:Name="txtPassword" 
+            <Entry x:Name="txtPasswordLogin" 
                    Grid.Row="3" 
                    Placeholder="Password" 
                    IsPassword="True" 

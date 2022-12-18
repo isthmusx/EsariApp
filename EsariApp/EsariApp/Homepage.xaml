@@ -17,8 +17,8 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-           
-                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0" BackgroundColor="#eaebea">
+            <Label  Grid.Row="0" x:Name="MyUserName" FontAttributes="Bold" FontSize="Large" TextColor="#d8323c"/>
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0" BackgroundColor="#eaebea">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>

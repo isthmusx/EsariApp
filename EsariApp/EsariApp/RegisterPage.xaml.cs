@@ -4,16 +4,17 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Firebase.Auth;
 using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using EsariApp.Tables;
 
 namespace EsariApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterPage : ContentPage
     {
+        public string WebAPIKey = "AIzaSyDOnIArEwj7-fFgIb0NRDrVmiltactZE5E";
         public RegisterPage()
         {
             InitializeComponent();
@@ -23,9 +24,19 @@ namespace EsariApp
             Navigation.PushAsync(new LoginUI());
         }
 
-        void Button_Clicked(object sender, EventArgs e)
+        async void Button_Clicked(object sender, EventArgs e)
         {
-
+            try
+            {
+                var authProvider = new FirebaseAuthProvider(new FirebaseConfig(WebAPIKey));
+                var auth = await authProvider.CreateUserWithEmailAndPasswordAsync(txtEmail.Text, txtPassword.Text);
+                string getToken = auth.FirebaseToken;
+                await App.Current.MainPage.DisplayAlert("Alert", getToken, "Ok");
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "Ok");
+            }
         }
     }
 }
