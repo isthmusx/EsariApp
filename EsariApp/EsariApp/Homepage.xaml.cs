@@ -41,9 +41,29 @@ namespace EsariApp
             }
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private void ImageButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new LoginUI());
+             Navigation.PushAsync(new InventoryPage());
+        }
+
+        private void ImageButton_Clicked_1(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ExpensePage());
+        }
+
+        private void ImageButton_Clicked_2(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SalesPage());
+        }
+
+        private void ImageButton_Clicked_3(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new OrdersPage());
+        }
+
+        private void ImageButton_Clicked_4(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Records());
         }
     }
 }

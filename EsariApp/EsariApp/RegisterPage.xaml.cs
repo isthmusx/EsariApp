@@ -9,6 +9,7 @@ using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace EsariApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -37,6 +38,7 @@ namespace EsariApp
             {
                 await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "Ok");
             }
+            
         }
     }
 }

@@ -4,45 +4,164 @@
              x:Class="EsariApp.Homepage"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#0c0e0c">
+             BackgroundColor="#f6f0f0">
+    
     <ContentPage.Content>
-        <StackLayout>
-            
-            <Label  HorizontalTextAlignment="End" Margin="0,25,10,25">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Grid.Row="0" Text="Welcome" FontAttributes="Bold" FontSize="Large" TextColor="#d8323c"/>
-                        <Span Grid.Row="0" Text=" seller" FontAttributes="Bold" FontSize="Large" TextColor="#d8323c" />
-                        <Span Grid.Row="0" Text="!" FontAttributes="Bold" FontSize="Large" TextColor="#d8323c" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label  Grid.Row="0" x:Name="MyUserName" FontAttributes="Bold" FontSize="Large" TextColor="#d8323c"/>
-            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0" BackgroundColor="#eaebea">
-                    <Grid.RowDefinitions>
+
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0,50,0,0"  >
+            <Grid.RowDefinitions >
+                <RowDefinition Height="200"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Margin="0,-150,20,0" Source="esarilogo.png" Aspect="AspectFit" HeightRequest="100" WidthRequest="180" HorizontalOptions="End"></Image>
+
+
+            <Frame Grid.Row="1" BackgroundColor="White" Margin="0,0,0,-1000" BorderColor="Transparent" CornerRadius="50" HeightRequest="2000" WidthRequest="700">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="30,0,20,0">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+
                     </Grid.RowDefinitions>
+                    <Label Grid.Row="0"
+                           HorizontalOptions="Start"
+                           Margin="0,0,0,0">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Hello, " 
+                                      TextColor="Black" 
+                                      CharacterSpacing="1"
+                                      FontSize="20"
+                                      FontFamily="Bebas-Neue" >
+                                </Span>
+                                <Span 
+                                      FontFamily="Bebas-Neue"
+                                      x:Name="MyUserName"
+                                      CharacterSpacing="1"
+                                      FontSize="20"
+                                      TextColor="#00D8C1" >
+                                </Span>
+                                <Span Text="!"
+                                      TextColor="Black" 
+                                      CharacterSpacing="1"
+                                      FontSize="20"
+                                      FontFamily="Bebas-Neue"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Grid.Row="1"
+                           Text="Let's manage your store!" 
+                           TextColor="Black" 
+                           CharacterSpacing="1"
+                           FontSize="15"
+                           FontFamily="Athiti-SemiBold"
+                           Margin="0,-20,0,0"/>
 
-                <Button Grid.Row="1" Grid.Column="0" BackgroundColor="#d8323c" ImageSource="" Text="Inventory Management" HeightRequest="150" WidthRequest="150" CornerRadius="20"/>
-                <Button Grid.Row="1" Grid.Column="1" BackgroundColor="#d8323c" ImageSource="" Text="Expense Tracker" HeightRequest="150" WidthRequest="150" CornerRadius="20"/>
-                <Button Grid.Row="2" Grid.Column="0" BackgroundColor="#d8323c" ImageSource="" Text="Sales and Accounting Reports" HeightRequest="150" WidthRequest="150" CornerRadius="20"/>
-                <Button Grid.Row="2" Grid.Column="1" BackgroundColor="#d8323c" ImageSource="" Text="Store Links" HeightRequest="150" WidthRequest="150" CornerRadius="20"/>
-                <Button Grid.Row="3" Grid.Column="0" BackgroundColor="#d8323c" ImageSource="" Text="Orders and Deliveries" HeightRequest="150" WidthRequest="150" CornerRadius="20"/>
-                <Button Grid.Row="3" Grid.Column="1" BackgroundColor="#d8323c" ImageSource="" Text="Record Book" HeightRequest="150" WidthRequest="150" CornerRadius="20"/>
-            </Grid>
 
+                    <Frame Grid.Row="2" BorderColor="Transparent" CornerRadius="50" HeightRequest="1000" WidthRequest="1000" Margin="0,0,0,-500">
+                        <Grid RowSpacing="20" Padding="10,0,10,0">
+                            <Grid.RowDefinitions >
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
 
+                            <ImageButton Grid.Row="0" Source="IMbtn.png" WidthRequest="120" HeightRequest="120" Aspect="Fill" HorizontalOptions="Start" CornerRadius="10" Clicked="ImageButton_Clicked">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale" Value="1"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                        <VisualState x:Name="Pressed">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale" Value="0.8"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>                                
+                                </VisualStateManager.VisualStateGroups>
+                            </ImageButton>
+                            <ImageButton Grid.Row="0" Source="ETbtn.png" WidthRequest="120" HeightRequest="120" Aspect="Fill" HorizontalOptions="End" CornerRadius="10" Clicked="ImageButton_Clicked_1">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale" Value="1"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                        <VisualState x:Name="Pressed">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale" Value="0.8"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                            </ImageButton>
+                            <ImageButton Grid.Row="1" Source="SRbtn.png" WidthRequest="120" HeightRequest="120" Aspect="Fill" HorizontalOptions="Start" CornerRadius="10" Clicked="ImageButton_Clicked_2">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale" Value="1"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                        <VisualState x:Name="Pressed">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale" Value="0.8"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                            </ImageButton>
+                            <ImageButton Grid.Row="1" Source="ODbtn.png" WidthRequest="120" HeightRequest="120" Aspect="Fill" HorizontalOptions="End" CornerRadius="10" Clicked="ImageButton_Clicked_3">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale" Value="1"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                        <VisualState x:Name="Pressed">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale" Value="0.8"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                            </ImageButton>
+                            <ImageButton  Grid.Row="2" Source="RBbtn.png" WidthRequest="120" HeightRequest="120" Aspect="Fill" HorizontalOptions="Center" CornerRadius="10" Clicked="ImageButton_Clicked_4">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale" Value="1"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                        <VisualState x:Name="Pressed">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale" Value="0.8"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                            </ImageButton>
+                            
+                        </Grid>
+                    </Frame>
+                    
+                </Grid>
 
-            <Button Text="LOGOUT" BackgroundColor="#d8323c" Clicked="Button_Clicked"/>
+            </Frame>
 
-        </StackLayout>
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>
