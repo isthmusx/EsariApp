@@ -11,10 +11,13 @@ using Firebase.Auth;
 using System.Runtime.InteropServices;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
+using Acr.UserDialogs;
+
 
 namespace EsariApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
     public partial class LoginUI : ContentPage
     {
 
@@ -35,13 +38,16 @@ namespace EsariApp
                 var content = await auth.GetFreshAuthAsync();
                 var serializedContent = JsonConvert.SerializeObject(content);
                 Preferences.Set("MyFirebaseRefreshToken", serializedContent);
+
+                
+
                 await Navigation.PushAsync(new Homepage());
             }
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "Ok");
             }
-
+           
         }
 
         private void BTNRegister(object sender, EventArgs e)

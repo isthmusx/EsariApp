@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using Acr.UserDialogs;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -16,6 +17,8 @@ namespace EsariApp
         public App()
         {
             InitializeComponent();
+            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
+
 
             if (!string.IsNullOrEmpty(Preferences.Get("MyfirebaseRefreshToken", "")))
             {

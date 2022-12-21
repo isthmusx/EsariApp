@@ -12,18 +12,14 @@ using Xamarin.Forms.Xaml;
 namespace EsariApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Homepage : ContentPage
+    public partial class ProfilePage : ContentPage
     {
-        
         public string WebAPIKey = "AIzaSyDOnIArEwj7-fFgIb0NRDrVmiltactZE5E";
-        public Homepage()
+        public ProfilePage()
         {
             InitializeComponent();
-
             GetProfileInformationAndRefreshToken();
-
         }
-        
 
         private async void GetProfileInformationAndRefreshToken()
         {
@@ -43,34 +39,39 @@ namespace EsariApp
             }
         }
 
-        private void ImageButton_Clicked(object sender, EventArgs e)
+        private void TapHome(object sender, EventArgs e)
         {
-             Navigation.PushAsync(new InventoryPage());
+            Navigation.PushAsync(new Homepage());
         }
 
-        private void ImageButton_Clicked_1(object sender, EventArgs e)
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new InventoryPage());
+        }
+
+        private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ExpensePage());
         }
 
-        private void ImageButton_Clicked_2(object sender, EventArgs e)
+        private void TapGestureRecognizer_Tapped_2(object sender, EventArgs e)
         {
             Navigation.PushAsync(new SalesPage());
         }
 
-        private void ImageButton_Clicked_3(object sender, EventArgs e)
+        private void TapGestureRecognizer_Tapped_3(object sender, EventArgs e)
         {
             Navigation.PushAsync(new OrdersPage());
         }
 
-        private void ImageButton_Clicked_4(object sender, EventArgs e)
+        private void TapGestureRecognizer_Tapped_4(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Records());
         }
 
-        private void ImageButton_Clicked_5(object sender, EventArgs e)
+        private void ImageButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ProfilePage());
+            Navigation.PushAsync(new LoginUI());
         }
     }
 }

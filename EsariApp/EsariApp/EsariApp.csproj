@@ -31,6 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.564" />
     <PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
@@ -51,6 +52,9 @@
     <EmbeddedResource Update="FlyoutPage1Detail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="FlyoutPageDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="ForgotPassPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -64,6 +68,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="OrdersPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="RecordsPage.xaml">

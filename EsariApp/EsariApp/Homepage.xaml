@@ -14,8 +14,9 @@
                 <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Margin="0,-150,20,0" Source="esarilogo.png" Aspect="AspectFit" HeightRequest="100" WidthRequest="180" HorizontalOptions="End"></Image>
-
-
+            <StackLayout>
+            <ImageButton Grid.Row="0" Grid.Column="0" Margin="20,5,0,0" HorizontalOptions="Start" Source="profileuser.png" BackgroundColor="Transparent" CornerRadius="90" HeightRequest="40" WidthRequest="40" Clicked="ImageButton_Clicked_5"></ImageButton>
+            </StackLayout>
             <Frame Grid.Row="1" BackgroundColor="White" Margin="0,0,0,-1000" BorderColor="Transparent" CornerRadius="50" HeightRequest="2000" WidthRequest="700">
                 <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="30,0,20,0">
                     <Grid.RowDefinitions >

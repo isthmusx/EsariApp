@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EsariApp.ProfilePage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#ffffff">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="50,50,50,0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontFamily="Bebas-Neue"
+                                  Text="StoreName"
+                                  x:Name="storeName"
+                                  CharacterSpacing="1.5"
+                                  FontSize="30"
+                                  TextColor="Black" >
+                            </Span>
+                            <Span FontFamily="Bebas-Neue"
+                                  Text="'s Store"
+                                  CharacterSpacing="1.5"
+                                  FontSize="30"
+                                  TextColor="Black">
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label Grid.Row="1"
+                       FontFamily="Athiti-Regular"
+                       Text="StoreName@gmail.com"
+                       x:Name="MyUserName"
+                       CharacterSpacing="1"
+                       FontSize="17"
+                       TextColor="Black" >
+                </Label>
+
+                <BoxView Grid.Row="2" HorizontalOptions="FillAndExpand" WidthRequest="1" HeightRequest="1" Color="LightGray" Margin="-20,50,-20,50"/>
+                
+                <Label Grid.Row="3"
+                       Text="Home"
+                       FontFamily="Bebas-Neue"
+                       CharacterSpacing="1.5"
+                       FontSize="20"
+                       TextColor="Black"
+                       Margin="0,15">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapHome"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Grid.Row="4"
+                       Text="Inventory Management"
+                       FontFamily="Bebas-Neue"
+                       CharacterSpacing="1.5"
+                       FontSize="20"
+                       TextColor="Black"
+                       Margin="0,15">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Grid.Row="5"
+                       Text="Expense Tracker"
+                       FontFamily="Bebas-Neue"
+                       CharacterSpacing="1.5"
+                       FontSize="20"
+                       TextColor="Black"
+                       Margin="0,15">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Grid.Row="6"
+                       Text="Sales Report"
+                       FontFamily="Bebas-Neue"
+                       CharacterSpacing="1.5"
+                       FontSize="20"
+                       TextColor="Black"
+                       Margin="0,15">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Grid.Row="7"
+                       Text="Orders and Deliveries"
+                       FontFamily="Bebas-Neue"
+                       CharacterSpacing="1.5"
+                       FontSize="20"
+                       Margin="0,15"
+                       TextColor="Black">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Grid.Row="8"
+                       Text="Record Book"
+                       FontFamily="Bebas-Neue"
+                       CharacterSpacing="1.5"
+                       FontSize="20"
+                       Margin="0,15"
+                       TextColor="Black">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <BoxView Grid.Row="9" HorizontalOptions="FillAndExpand" WidthRequest="1" HeightRequest="1" Color="LightGray" Margin="-20,50,0,50"/>
+
+                
+                <ImageButton Grid.Row="10" Source="out.png" Aspect="Fill" WidthRequest="120" HeightRequest="30" HorizontalOptions="StartAndExpand" Clicked="ImageButton_Clicked"/>
+
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
